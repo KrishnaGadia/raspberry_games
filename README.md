@@ -1,2 +1,2 @@
 # raspberry_racer
-python car_racer.py
+python car_race.py
