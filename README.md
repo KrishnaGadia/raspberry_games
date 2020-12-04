@@ -8,7 +8,9 @@ There are currently five games in this repo
 
 4. snake.py - Move a blue snake to eat red apples. Eating the apples makes the snake longer and faster
 
-5. TicTacToe - Classic 2 player game to be played with a friend. Create 3 in a row/column or diagonal to win
+5. TicTacToe.py - Classic 2 player game to be played with a friend. Create 3 in a row/column or diagonal to win
+
+There is also a simple controller script to select which game to play
 
 ## running the game
 python controller.py
