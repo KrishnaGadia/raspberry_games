@@ -68,7 +68,7 @@ def draw_snake(t):
 	    # Duplicates the last segment by duplicating the last 2 values on the list.
 
     for i in range(1, len(snake_pos)-1):
-        global snake_pos
+        #global snake_pos
         snake_pos[len(snake_pos)-i]=snake_pos[len(snake_pos)-i-2]
 	# Move each segment, except the head, to where the segment in front of it was.     
     if snake_dir == 1:

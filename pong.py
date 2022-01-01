@@ -41,6 +41,7 @@ if inverted:
     # Inverts the screen of the Sense HAT (but annoyingly enough, not the joystick)
 
 def draw_ball():
+    global ball_position
     ball_position[0] += ball_velocity[0]
     ball_position[1] += ball_velocity[1]
     # Adds the ball velocity to the ball position, for both x and y axes.
@@ -52,13 +53,15 @@ def draw_ball():
         # back. 
     if ball_position[0] == 0:
         sense.show_message("You lost! ", text_colour=(255, 0, 0))
-        quit()
+        #quit()
+        ball_position = [3, 3]
         # If you miss the ball and it hits the left boundary, you lose, the Sense
         # HAT displays a message, and the game quits. 
         
     if ball_position[0] == 7:
         sense.show_message("You won! ", text_colour=(0, 255, 0))
-        quit()
+        #quit()
+        ball_position = [3, 3]
         # If your opponent misses the ball, you win, the Sense
         # HAT displays a message, and the game quits. 
 
@@ -121,12 +124,13 @@ else:
     sense.stick.direction_down = move_up
     sense.stick.direction_up = move_down
 
+
 # Drawing the bat for the first time
 draw_bat()
 
 # Main game loop
 while True:
-    global t
+    #global t
     sense.clear()
     
     # Every 2 out of 3 frames, move the opponent's paddle towards the ball.
